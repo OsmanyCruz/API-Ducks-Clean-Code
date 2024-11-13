@@ -15,8 +15,8 @@ class DuckController {
   
     async getDucksByNumber(req, res) {
       try {
-        const { number } = req.params;
-        const urls = await this.getDucksByNumberUseCase.execute(parseInt(number));
+        const number = parseInt(req.params.number, 10);
+        const urls = await this.getDucksByNumberUseCase.execute(number);
         res.json({ urls });
       } catch (error) {
         res.status(500).json({ error: error.message });

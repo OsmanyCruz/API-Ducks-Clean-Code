@@ -1,4 +1,4 @@
-class GetRandomDuck {
+class getRandomDuckUseCase {
     constructor(duckRepository) {
       this.duckRepository = duckRepository;
     }
@@ -10,4 +10,4 @@ class GetRandomDuck {
     }
   }
   
-  module.exports = GetRandomDuck;
+  module.exports = getRandomDuckUseCase;

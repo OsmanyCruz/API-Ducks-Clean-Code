@@ -1,7 +1,7 @@
 const express = require("express");
 const DuckApiRepository = require("../../infrastructure/repositories/duckApiRepository");
-const GetRandomDuck = require("../../usecases/getRandomDuck");
-const GetDucksByNumber = require("../../usecases/getDucksByNumber");
+const GetRandomDuck = require("../../usecases/getRandomDuckUseCase");
+const GetDucksByNumber = require("../../usecases/getDucksByNumberUseCase");
 const DuckController = require("../controllers/duckController");
 
 const router = express.Router();
@@ -13,7 +13,7 @@ const getDucksByNumber = new GetDucksByNumber(duckRepository);
 const duckController = new DuckController(getRandomDuck, getDucksByNumber);
 
 // Rutas
-router.get("/random-duck", (req, res) => duckController.getRandomDuck(req, res));
+router.get("/ducks/random", (req, res) => duckController.getRandomDuck(req, res));
 router.get("/ducks/:number", (req, res) => duckController.getDucksByNumber(req, res));
 
 module.exports = router;
