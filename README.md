@@ -68,7 +68,7 @@ project/
 - **500**: Internal Server Error: Error al consumir el servicio externo.
 
 ### Endpoint numero
-- **GET** /api/ducks/number/:number
+- **GET** /api/ducks/:number
 - Obtiene todas las imágenes de patos cuyo número coincida con el proporcionado.
 
 **Request**
