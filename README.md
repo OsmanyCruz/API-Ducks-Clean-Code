@@ -13,7 +13,7 @@
 - [Estructura del Proyecto](#estructura-del-Proyecto)
 - [Endpoints](#endpoints)
   - [GET /api/ducks/random](#endpoint-random)
-  - [GET /api/ducks/number/:number](#endpoint-numero)
+  - [GET /api/ducks/:number](#endpoint-numero)
 - [Consideraciones](#consideraciones)
 - [Ejecución](#ejecución)
 
